@@ -1,0 +1,36 @@
+/event-checkin-system
+  ├── server.js
+  ├── package.json
+  ├── .env
+  ├── /config
+  │    ├── db.js
+  │    └── auth.js
+  ├── /controllers
+  │    ├── userController.js
+  │    ├── eventController.js
+  │    └── checkinController.js
+  ├── /middleware
+  │    ├── auth.js
+  │    └── roles.js
+  ├── /models
+  │    ├── User.js
+  │    ├── Event.js
+  │    └── Registration.js
+  ├── /routes
+  │    ├── userRoutes.js
+  │    ├── eventRoutes.js
+  │    └── adminRoutes.js
+  └── /utils
+       ├── qrGenerator.js
+       └── emailService.js
+
+
+
+
+== JWTs are primarily used for authentication and secure data exchange in web applications and APIs.
+How JWT token Works?
+User Logs In: The client (browser) sends login credentials to the server.
+Server Generates JWT: If credentials are valid, the server creates a JWT containing user data and signs it with a secret key.
+Token Sent to Client: The JWT is sent back to the client and stored (usually in localStorage or a cookie).
+Client Sends Token in Requests: For protected routes, the client includes the JWT in the Authorization header (Bearer Token).
+Server Verifies and Responds: The server verifies the token, extracts user info, and processes the request if valid.
